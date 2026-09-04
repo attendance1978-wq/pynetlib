@@ -1,0 +1,5 @@
+# pynetlib v25.0 - reference client example
+import lib.pynetlib.main as net
+client = net.create_client("127.0.0.1", 8888, sync=True)
+client.connect()
+response = client.send_and_receive(b"Hello!")

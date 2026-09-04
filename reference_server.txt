@@ -1,0 +1,5 @@
+# pynetlib v25.0 - reference server example
+import lib.pynetlib.main as net
+server = net.create_server("0.0.0.0", 8888, sync=True)
+server.on_message = lambda cid, data: f"Echo: {data.decode()}".encode()
+server.start()
